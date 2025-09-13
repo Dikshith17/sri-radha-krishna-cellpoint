@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Radha Krishna CellPoint</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1>🪔 Sri Radha Krishna CellPoint 🪔</h1>
+    <p>Mobile Repair | Door Delivery within 30km</p>
+    <div class="contact-header">
+      <a href="tel:+916303869578" class="btn-call">📞 Call Now</a>
+      <a href="https://wa.me/916303869578" target="_blank" class="btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </header>
+
+  <!-- Services Tabs -->
+  <section class="tabs">
+    <button class="tab-btn" onclick="openTab('screen')">📱 Screen Replacement</button>
+    <button class="tab-btn" onclick="openTab('charging')">🔌 Charging Port</button>
+    <button class="tab-btn" onclick="openTab('battery')">🔋 Battery</button>
+    <button class="tab-btn" onclick="openTab('software')">💻 Software Fix</button>
+    <button class="tab-btn" onclick="openTab('door')">🚚 Door Delivery</button>
+    <button class="tab-btn" onclick="openTab('accessories')">🎧 Accessories</button>
+  </section>
+
+  <!-- Dynamic Tab Content -->
+  <section id="tabContent" class="tab-content">
+    <p>Click any service to view details.</p>
+  </section>
+
+  <!-- Booking Form -->
+  <section class="form-section">
+    <h2>📋 Book Your Service</h2>
+    <form action="https://formspree.io/f/xeoldpae" method="POST">
+      <label>Full Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Address:</label>
+      <textarea name="address" rows="3" required></textarea>
+
+      <label>Select OS:</label>
+      <select name="os" id="os" onchange="toggleModelInput()" required>
+        <option value="">-- Select --</option>
+        <option value="Android">Android</option>
+        <option value="iOS">iOS</option>
+      </select>
+
+      <div id="android-model" class="hidden">
+        <label>Android Phone Brand & Model:</label>
+        <input type="text" name="android_model">
+      </div>
+
+      <div id="ios-model" class="hidden">
+        <label>iPhone Model:</label>
+        <input type="text" name="ios_model">
+      </div>
+
+      <label>Accessories (if any):</label>
+      <input type="text" name="accessories" placeholder="Eg: Charger, Earphones">
+
+      <label>Message:</label>
+      <textarea name="message" rows="3"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <marquee behavior="scroll" direction="left"> 
+      📖 Hare Krishna Hare Krishna Krishna Krishna Hare Hare | Hare Rama Hare Rama Rama Rama Hare Hare 📖
+    </marquee>
+    <p>📞 +91 6303869578 | ✉️ sreeradhakrishnacellpoint@gmail.com</p>
+    <p>© 2025 Sri Radha Krishna CellPoint | Prop. Dikshith</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
